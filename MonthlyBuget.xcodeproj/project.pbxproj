@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A713E86629396F3F006D42D6 /* TransactionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713E86529396F3F006D42D6 /* TransactionDataModel.swift */; };
+		A713E86929397135006D42D6 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = A713E86829397135006D42D6 /* Realm */; };
+		A713E86B29397135006D42D6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A713E86A29397135006D42D6 /* RealmSwift */; };
+		A713E86D293973DA006D42D6 /* RealmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713E86C293973D9006D42D6 /* RealmDataManager.swift */; };
+		A713E87529398750006D42D6 /* DatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713E87429398750006D42D6 /* DatabaseTests.swift */; };
 		A75FFB7D2936C91600A9B69E /* MonthlyBugetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75FFB7C2936C91600A9B69E /* MonthlyBugetApp.swift */; };
 		A75FFB7F2936C91600A9B69E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75FFB7E2936C91600A9B69E /* ContentView.swift */; };
 		A75FFB812936C91800A9B69E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75FFB802936C91800A9B69E /* Assets.xcassets */; };
@@ -15,7 +20,21 @@
 		A75FFB912936CE4300A9B69E /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = A75FFB902936CE4300A9B69E /* Documentation.docc */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A713E87629398750006D42D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A75FFB712936C91600A9B69E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A75FFB782936C91600A9B69E;
+			remoteInfo = MonthlyBuget;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		A713E86529396F3F006D42D6 /* TransactionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDataModel.swift; sourceTree = "<group>"; };
+		A713E86C293973D9006D42D6 /* RealmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataManager.swift; sourceTree = "<group>"; };
+		A713E87229398750006D42D6 /* DatabaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatabaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A713E87429398750006D42D6 /* DatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseTests.swift; sourceTree = "<group>"; };
 		A75FFB792936C91600A9B69E /* MonthlyBuget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonthlyBuget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75FFB7C2936C91600A9B69E /* MonthlyBugetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBugetApp.swift; sourceTree = "<group>"; };
 		A75FFB7E2936C91600A9B69E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,20 +46,38 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A75FFB762936C91600A9B69E /* Frameworks */ = {
+		A713E86F29398750006D42D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A75FFB762936C91600A9B69E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A713E86B29397135006D42D6 /* RealmSwift in Frameworks */,
+				A713E86929397135006D42D6 /* Realm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A713E87329398750006D42D6 /* DatabaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				A713E87429398750006D42D6 /* DatabaseTests.swift */,
+			);
+			path = DatabaseTests;
+			sourceTree = "<group>";
+		};
 		A75FFB702936C91600A9B69E = {
 			isa = PBXGroup;
 			children = (
 				A75FFB7B2936C91600A9B69E /* MonthlyBuget */,
+				A713E87329398750006D42D6 /* DatabaseTests */,
 				A75FFB7A2936C91600A9B69E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				A75FFB792936C91600A9B69E /* MonthlyBuget.app */,
+				A713E87229398750006D42D6 /* DatabaseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				A75FFB8E2936CA0700A9B69E /* MainDataModel.swift */,
+				A713E86529396F3F006D42D6 /* TransactionDataModel.swift */,
+				A713E86C293973D9006D42D6 /* RealmDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,6 +142,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A713E87129398750006D42D6 /* DatabaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A713E87829398750006D42D6 /* Build configuration list for PBXNativeTarget "DatabaseTests" */;
+			buildPhases = (
+				A713E86E29398750006D42D6 /* Sources */,
+				A713E86F29398750006D42D6 /* Frameworks */,
+				A713E87029398750006D42D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A713E87729398750006D42D6 /* PBXTargetDependency */,
+			);
+			name = DatabaseTests;
+			productName = DatabaseTests;
+			productReference = A713E87229398750006D42D6 /* DatabaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A75FFB782936C91600A9B69E /* MonthlyBuget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A75FFB882936C91800A9B69E /* Build configuration list for PBXNativeTarget "MonthlyBuget" */;
@@ -115,6 +173,10 @@
 			dependencies = (
 			);
 			name = MonthlyBuget;
+			packageProductDependencies = (
+				A713E86829397135006D42D6 /* Realm */,
+				A713E86A29397135006D42D6 /* RealmSwift */,
+			);
 			productName = MonthlyBuget;
 			productReference = A75FFB792936C91600A9B69E /* MonthlyBuget.app */;
 			productType = "com.apple.product-type.application";
@@ -129,6 +191,10 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					A713E87129398750006D42D6 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = A75FFB782936C91600A9B69E;
+					};
 					A75FFB782936C91600A9B69E = {
 						CreatedOnToolsVersion = 14.1;
 					};
@@ -143,16 +209,27 @@
 				Base,
 			);
 			mainGroup = A75FFB702936C91600A9B69E;
+			packageReferences = (
+				A713E86729397135006D42D6 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = A75FFB7A2936C91600A9B69E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A75FFB782936C91600A9B69E /* MonthlyBuget */,
+				A713E87129398750006D42D6 /* DatabaseTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A713E87029398750006D42D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A75FFB772936C91600A9B69E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,6 +242,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A713E86E29398750006D42D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A713E87529398750006D42D6 /* DatabaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A75FFB752936C91600A9B69E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,12 +258,66 @@
 				A75FFB7F2936C91600A9B69E /* ContentView.swift in Sources */,
 				A75FFB7D2936C91600A9B69E /* MonthlyBugetApp.swift in Sources */,
 				A75FFB912936CE4300A9B69E /* Documentation.docc in Sources */,
+				A713E86629396F3F006D42D6 /* TransactionDataModel.swift in Sources */,
+				A713E86D293973DA006D42D6 /* RealmDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A713E87729398750006D42D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A75FFB782936C91600A9B69E /* MonthlyBuget */;
+			targetProxy = A713E87629398750006D42D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A713E87929398750006D42D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TL6Q43TK9R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solojumman.DatabaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonthlyBuget.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MonthlyBuget";
+			};
+			name = Debug;
+		};
+		A713E87A29398750006D42D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TL6Q43TK9R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solojumman.DatabaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonthlyBuget.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MonthlyBuget";
+			};
+			name = Release;
+		};
 		A75FFB862936C91800A9B69E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -367,6 +506,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A713E87829398750006D42D6 /* Build configuration list for PBXNativeTarget "DatabaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A713E87929398750006D42D6 /* Debug */,
+				A713E87A29398750006D42D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A75FFB742936C91600A9B69E /* Build configuration list for PBXProject "MonthlyBuget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -386,6 +534,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A713E86729397135006D42D6 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.33.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A713E86829397135006D42D6 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A713E86729397135006D42D6 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		A713E86A29397135006D42D6 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A713E86729397135006D42D6 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A75FFB712936C91600A9B69E /* Project object */;
 }
