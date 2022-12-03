@@ -10,19 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var string1 = ""
     var body: some View {
-        VStack {
-            VStack {
-            
-                
-                
-            }
-            
-                
-        }
-        .padding()
-        .background(.red)
-        .ignoresSafeArea()
-        
+       TabBarView()
     }
 }
 

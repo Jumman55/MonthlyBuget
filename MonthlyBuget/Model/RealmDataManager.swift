@@ -55,7 +55,7 @@ class RealmDataManager: ObservableObject{
                     // create an transaction data as list of values
                     let newTransaction = Transaction(value: ["euro": euro, "catagory": catagory, "note": note, "date": date])
                     //added the data into final database
-                    localRealm.add(newTransaction)
+                     localRealm.add(newTransaction)
                     //need to read the database hear by fatching database
                     readTransactions()
                     print("Added new transaction to Realm: \(newTransaction)")
