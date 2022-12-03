@@ -11,7 +11,7 @@ import RealmSwift
 /// This is the basic data model for every transaction such as food , Travel
 /// This model based on RealmSwift Object class/protocol
 
-class Transaction: Object{
+class Transaction: Object, ObjectKeyIdentifiable{
     //MARK: - PROPERTIES
     @Persisted(primaryKey: true)  var id: ObjectId
     @Persisted var euro: Float

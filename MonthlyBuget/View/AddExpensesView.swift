@@ -12,7 +12,32 @@ struct AddExpensesView: View {
     @StateObject var addExpenses = AddExpenses()
     //MARK: -BODY
     var body: some View {
-        Text("Add something!")
+        VStack{
+            TextField("How much spend?", value: $addExpenses.euro, formatter: NumberFormatter())
+                .padding()
+            TextField("What is the type?", text: $addExpenses.catagory)
+                .padding()
+            TextField("Any Details?", text: $addExpenses.note)
+                .padding()
+                
+            TextField("Date", text: $addExpenses.data)
+                .padding()
+            
+            Button("Save") {
+                addExpenses.addTransaction()
+            }
+            
+            List{
+                ForEach(addExpenses.realmDataManager.transactions, id: \.id){ tran in
+                    Text("\(tran.catagory)")
+                    
+                }
+            }
+            
+        }//: VStack
+        .padding()
+        
+    
     }
 }
 
