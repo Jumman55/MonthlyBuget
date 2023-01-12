@@ -70,7 +70,29 @@ class RealmDataManager: ObservableObject{
         
     }//: updateTransaction
     
-    public func deleteTransaction(){
+    public func deleteTransaction(id: ObjectId){
+            // Make sure a Realm instance is open
+        guard let localRealm = localRealm else {
+            print("Error: Realm is not open.")
+            return
+        }
         
+            // Find the transaction with the specified id
+        guard let transactionToDelete = localRealm.objects(Transaction.self).filter("id == %@", id).first else {
+            print("Error: No transaction found with id: \(id)")
+            return
+        }
+        
+        do{
+            try localRealm.write{
+                    // Delete the transaction
+                localRealm.delete(transactionToDelete)
+                    // Update the transactions array
+                readTransactions()
+                print("Deleted transaction with id: \(id)")
+            }
+        } catch{
+            print("Error deleting transaction from Realm: \(error)")
+        }
     }//: deleteTransaction
 }

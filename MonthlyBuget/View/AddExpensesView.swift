@@ -20,7 +20,7 @@ struct AddExpensesView: View {
             TextField("Any Details?", text: $addExpenses.note)
                 .padding()
                 
-            TextField("Date", text: $addExpenses.data)
+            TextField("Date", text: $addExpenses.date)
                 .padding()
             
             Button("Save") {
@@ -30,6 +30,13 @@ struct AddExpensesView: View {
             List{
                 ForEach(addExpenses.realmDataManager.transactions, id: \.id){ tran in
                     Text("\(tran.catagory)")
+                        .swipeActions(edge: .trailing){
+                            Button(role: .destructive){
+                                self.addExpenses.realmDataManager.deleteTransaction(id: tran.id)
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
                     
                 }
             }

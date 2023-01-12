@@ -19,4 +19,3 @@ class Transaction: Object, ObjectKeyIdentifiable{
     @Persisted var note: String
     @Persisted var date: String
 }
-

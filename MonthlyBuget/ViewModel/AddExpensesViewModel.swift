@@ -12,18 +12,21 @@ import Foundation
 final class AddExpenses: ObservableObject{
     //MARK: - PROPERTIES
     @Published var realmDataManager =  RealmDataManager()
-    @Published var euro: Float = 30.00
-    @Published var catagory: String = "Food"
-    @Published var note: String = "Get from conad"
-    @Published var data: String = "01/12/22"
+    @Published var euro: Float = 10.0
+    @Published var catagory: String = ""
+    @Published var note: String = ""
+    @Published var date: String = ""
     
     func addTransaction(){
-        realmDataManager.addTransaction(euro: euro, catagory: catagory, note: note, date: data)
+        realmDataManager.addTransaction(euro: euro, catagory: catagory, note: note, date: date)
     }
     
     func readTransaction(){
         realmDataManager.readTransactions()
     }
+//    func deleteTransction(){
+//        realmDataManager.deleteTransaction(id: realmDataManager.transactions)
+//    }
     
     
     //MARK: -BODY

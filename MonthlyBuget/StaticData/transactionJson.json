@@ -1,0 +1,58 @@
+[
+	{
+		"id": 1,
+		"euro": "14",
+		"category": "food",
+		"note": "My first food note",
+		"date": "12/12/2022"
+	},
+	{
+		"id": 2,
+		"euro": "35",
+		"category": "Travel",
+		"note": "My first tarvel note",
+		"date": "14/12/2022"
+	},
+	{
+		"id": 3,
+		"euro": "20.2",
+		"category": "Entertainment",
+		"note": "My first Entertainment note",
+		"date": "02/12/2022"
+	},
+	{
+		"id": 4,
+		"euro": "4.75",
+		"category": "medical",
+		"note": "My first medical note",
+		"date": "09/11/2022"
+	},
+	{
+		"id": 5,
+		"euro": "150",
+		"category": "Home",
+		"note": "last month house rent",
+		"date": "12/02/2022"
+	},
+	{
+		"id": 6,
+		"euro": "177",
+		"category": "personal Items",
+		"note": "Some clothes and gaming stuff",
+		"date": "12/12/2022"
+	},
+	{
+		"id": 7,
+		"euro": "87",
+		"category": "utilities",
+		"note": "gas , water and others bills",
+		"date": "12/12/2022"
+	},
+	{
+		"id": 8,
+		"euro": "17.97",
+		"category": "others",
+		"note": "My haircut and other I hope",
+		"date": "11/10/2022"
+	}
+]
